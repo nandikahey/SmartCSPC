@@ -20,7 +20,9 @@ contract DeliveryContract{
         _currentTemp = currentTemp;
         _isCompleted = false;
     }
-    
+    function setDurationThreshold(uint thresh){
+    	_durationThreshold = thresh;
+    }
     
     function verfiy(address deliveryBike, string currentLocation, uint currentTime, uint currentTemp){
         uint timeLapsed = currentTime - _createdTime;
